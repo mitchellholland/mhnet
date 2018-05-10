@@ -8,10 +8,18 @@ socket.onclose = () => {
   console.log(`${socket}: onclose`)
 }
 
+
 socket.onmessage = (payload) => {
-  console.log(`payload: ${payload.data}`)
+  const data = JSON.parse(payload.data)
+  const stars = data.stars as number
+  console.log(`payload: ${data}, stars: ${stars}`)
+
+  const starsParagraph = document.getElementById('stars') as HTMLElement
+  starsParagraph.innerHTML = `stars: ${stars}`
 }
 
 const buttonPressed = () => {
-  socket.send('button pressed')
+  const randomStarValue = Math.floor(Math.random() * 5) + 1 
+  const request = {'stars': randomStarValue}
+  socket.send(JSON.stringify(request))
 }
