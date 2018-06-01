@@ -99,5 +99,5 @@ typings/
 
 
 # End of https://www.gitignore.io/api/node,macos,visualstudiocode
-/client.js
-/server.js
+
+/dist/assets/bundle.js
