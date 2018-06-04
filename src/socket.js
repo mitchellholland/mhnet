@@ -2,7 +2,7 @@ import Stars from './Components/Stars'
 
 var socket = null
 const connectSocket = (completion) => {
-  socket = new WebSocket('ws://imac.local:3000')
+  socket = new WebSocket('wss://mitchellholland.net/socket')
 
   socket.onopen = () => {
     console.log(`${socket}: onopen`)
