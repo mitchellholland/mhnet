@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: './src/App.js',
@@ -23,10 +24,19 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/assets'),
     publicPath: 'assets'
   },
-  mode: 'development',
+  mode: 'production',
   devServer: {
     inline: true,
     contentBase: './dist',
     port: 8000
-  }
+  },
+  externals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM'
+  },
+  plugins: [
+    new UglifyJsPlugin({
+      sourceMap: true
+    })
+  ]
 };
