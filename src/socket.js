@@ -3,17 +3,17 @@ const connectSocket = (completion) => {
   socket = new WebSocket('wss://mitchellholland.net/socket')
 
   socket.onopen = () => {
-    console.log(`${socket}: onopen`)
+    // console.log(`${socket}: onopen`)
   }
 
   socket.onclose = () => {
-    console.log(`${socket}: onclose`)
+    // console.log(`${socket}: onclose`)
   }
 
   socket.onmessage = (payload) => {
     const data = JSON.parse(payload.data)
     const stars = data.stars
-    console.log(`payload: ${JSON.stringify(data)}, stars: ${stars}`)
+    // console.log(`payload: ${JSON.stringify(data)}, stars: ${stars}`)
     completion(stars)
   }
 }

@@ -16,7 +16,7 @@ export class Stars extends React.Component {
       half: false,
     }
     connectSocket((receivedStarCount) => {
-      console.log(`Stars received: ${receivedStarCount}`)
+      // console.log(`Stars received: ${receivedStarCount}`)
       this.setStarCountState(receivedStarCount)
     })
   }
