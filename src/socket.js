@@ -1,5 +1,3 @@
-import Stars from './Components/Stars'
-
 var socket = null
 const connectSocket = (completion) => {
   socket = new WebSocket('wss://mitchellholland.net/socket')

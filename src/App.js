@@ -1,10 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 import { Title } from './Components/Title'
-import { Stars } from './Components/Stars';
-
-import './style.css'
+import { Stars } from './Components/Stars'
 
 const appProps = {
   starValue: 3,
