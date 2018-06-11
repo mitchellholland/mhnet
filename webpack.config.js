@@ -7,24 +7,28 @@ module.exports = {
   module: {
     rules: [
       {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: "babel-loader"
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
-    }
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: ['.tsx', '.ts', '.js', '.css']
   },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist/assets'),
     publicPath: 'assets'
   },
-  mode : 'development',
-  devServer : {
+  mode: 'development',
+  devServer: {
     inline: true,
     contentBase: './dist',
     port: 8000

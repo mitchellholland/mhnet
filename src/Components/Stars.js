@@ -30,6 +30,6 @@ export class Stars extends React.Component {
   }
 
   render() {
-    return (<ReactStars {...this.state} value={this.state.value} />)
+    return (<ReactStars {...this.state} value={this.state.value} className="stars"/>)
   }
 }

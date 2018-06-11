@@ -4,11 +4,12 @@ import ReactDOM from 'react-dom';
 import { Title } from './Components/Title'
 import { Stars } from './Components/Stars';
 
+import './style.css'
+
 const appProps = {
   starValue: 3,
   title: 'Mitchell Holland',
-  subtitle: 'subtitle'
-
+  // subtitle: 'This is a subtitle for some reason',
 }
 
 class App extends React.Component {
@@ -21,9 +22,9 @@ class App extends React.Component {
       },
       stars: {
         starCount: props.starValue,
-        size: 30,
-        color2: '#ffd700',
-        color1: 'gray',
+        size: 35,
+        color2: '#ff7e79',
+        color1: '#424242',
       }
     }
   }

@@ -1,0 +1,29 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  background: #EBEBEB;
+}
+
+body {
+  text-align: center;
+  color: #424242;
+  padding: 30px;
+}
+
+h1 {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: -10px;
+}
+
+h2 {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+.stars {
+  margin: auto;
+  width: intrinsic;
+  padding: 10px;
+}
