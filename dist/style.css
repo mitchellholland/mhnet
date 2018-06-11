@@ -24,8 +24,8 @@ h2 {
 
 .stars {
   margin: auto;
-  width: intrinsic;
   padding: 10px;
+  display: inline-block;
 }
 
 /* https://daringfireball.net/css/fireball_screen.css?v1.8 */
@@ -41,6 +41,6 @@ h2 {
 /* Scale text for smaller screen */
 @media only screen and (max-width: 736px) {
   h1 {
-      font-size: 10vw;
+    font-size: 10vw;
  }
 }
